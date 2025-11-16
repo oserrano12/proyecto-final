@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galería - Sabores de Bucaramanga</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
@@ -76,7 +77,7 @@
                 <div class="gallery-item imagen-item bg-white rounded-2xl shadow-lg overflow-hidden" data-type="imagenes">
                     <div class="relative overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=600&h=400&fit=crop" alt="Proceso del café" 
-                             class="w-full h-64 object-cover transition-transform duration-500 hover:scale-110 retina-image">
+                            class="w-full h-64 object-cover transition-transform duration-500 hover:scale-110 retina-image">
                         <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
                             <button class="view-image opacity-0 hover:opacity-100 transform translate-y-4 hover:translate-y-0 transition-all duration-300 bg-white bg-opacity-90 text-amber-900 px-4 py-2 rounded-full font-medium">
                                 <i class="fas fa-expand mr-2"></i>Ver Imagen
@@ -93,7 +94,7 @@
                 <div class="gallery-item imagen-item bg-white rounded-2xl shadow-lg overflow-hidden" data-type="imagenes">
                     <div class="relative overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&h=400&fit=crop" alt="Panadería tradicional" 
-                             class="w-full h-64 object-cover transition-transform duration-500 hover:scale-110 retina-image">
+                            class="w-full h-64 object-cover transition-transform duration-500 hover:scale-110 retina-image">
                         <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
                             <button class="view-image opacity-0 hover:opacity-100 transform translate-y-4 hover:translate-y-0 transition-all duration-300 bg-white bg-opacity-90 text-amber-900 px-4 py-2 rounded-full font-medium">
                                 <i class="fas fa-expand mr-2"></i>Ver Imagen
@@ -110,7 +111,7 @@
                 <div class="gallery-item imagen-item bg-white rounded-2xl shadow-lg overflow-hidden" data-type="imagenes">
                     <div class="relative overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&h=400&fit=crop" alt="Ambiente acogedor" 
-                             class="w-full h-64 object-cover transition-transform duration-500 hover:scale-110 retina-image">
+                            class="w-full h-64 object-cover transition-transform duration-500 hover:scale-110 retina-image">
                         <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
                             <button class="view-image opacity-0 hover:opacity-100 transform translate-y-4 hover:translate-y-0 transition-all duration-300 bg-white bg-opacity-90 text-amber-900 px-4 py-2 rounded-full font-medium">
                                 <i class="fas fa-expand mr-2"></i>Ver Imagen
@@ -128,20 +129,27 @@
             <div class="mb-12">
                 <h2 class="text-3xl font-bold text-amber-900 mb-8 text-center">Videos de Nuestro Proceso</h2>
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    
                     <!-- Video 1 -->
                     <div class="gallery-item video-item bg-white rounded-2xl shadow-lg overflow-hidden" data-type="videos">
                         <div class="relative">
-                            <video controls class="w-full h-64 object-cover">
-                                <source src="https://assets.mixkit.co/videos/preview/mixkit-person-pouring-coffee-1711-large.mp4" type="video/mp4">
-                                Tu navegador no soporta el elemento video.
-                            </video>
+                            <iframe 
+                                width="100%" 
+                                height="320" 
+                                src="https://www.youtube.com/embed/6QgJk1qFIps" 
+                                title="Proceso del café artesanal" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen
+                                class="w-full h-64 rounded-t-2xl">
+                            </iframe>
                         </div>
                         <div class="p-6">
                             <h3 class="font-bold text-amber-900 mb-2 text-xl">Proceso del Café Artesanal</h3>
-                            <p class="text-gray-600 mb-4">Conoce cómo transformamos los granos de café en una experiencia única</p>
+                            <p class="text-gray-600 mb-4">Video demostrativo del proceso tradicional de preparación de café en Bucaramanga</p>
                             <div class="flex items-center text-sm text-gray-500">
                                 <i class="fas fa-clock mr-2"></i>
-                                <span>Duración: 2:30 min</span>
+                                <span>Duración: 2:38 min</span>
                             </div>
                         </div>
                     </div>
@@ -149,20 +157,27 @@
                     <!-- Video 2 -->
                     <div class="gallery-item video-item bg-white rounded-2xl shadow-lg overflow-hidden" data-type="videos">
                         <div class="relative">
-                            <video controls class="w-full h-64 object-cover">
-                                <source src="https://assets.mixkit.co/videos/preview/mixkit-baker-preparing-dough-for-bread-41359-large.mp4" type="video/mp4">
-                                Tu navegador no soporta el elemento video.
-                            </video>
+                            <iframe 
+                                width="100%" 
+                                height="320" 
+                                src="https://www.youtube.com/embed/jTIe9_GDlhg" 
+                                title="Técnicas de barismo" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen
+                                class="w-full h-64 rounded-t-2xl">
+                            </iframe>
                         </div>
                         <div class="p-6">
-                            <h3 class="font-bold text-amber-900 mb-2 text-xl">Elaboración del Pan Tradicional</h3>
-                            <p class="text-gray-600 mb-4">El secreto detrás de nuestros panes artesanales</p>
+                            <h3 class="font-bold text-amber-900 mb-2 text-xl">Elaboración de pan tradicional</h3>
+                            <p class="text-gray-600 mb-4">Aprende las técnicas avanzadas de preparación de pan artesanal</p>
                             <div class="flex items-center text-sm text-gray-500">
                                 <i class="fas fa-clock mr-2"></i>
-                                <span>Duración: 3:15 min</span>
+                                <span>Duración: 1:51 min</span>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
 
@@ -228,10 +243,22 @@
                 <div>
                     <h5 class="text-xl font-bold text-amber-300 mb-4">Síguenos</h5>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-amber-200 hover:text-amber-300 transition-colors duration-300 text-2xl"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="text-amber-200 hover:text-amber-300 transition-colors duration-300 text-2xl"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-amber-200 hover:text-amber-300 transition-colors duration-300 text-2xl"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-amber-200 hover:text-amber-300 transition-colors duration-300 text-2xl"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" 
+                        class="text-amber-200 hover:text-amber-300 transition-colors duration-300 text-2xl">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+                        class="text-amber-200 hover:text-amber-300 transition-colors duration-300 text-2xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"
+                        class="text-amber-200 hover:text-amber-300 transition-colors duration-300 text-2xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://web.whatsapp.com" target="_blank" rel="noopener noreferrer"
+                        class="text-amber-200 hover:text-amber-300 transition-colors duration-300 text-2xl">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
                     </div>
                 </div>
             </div>

@@ -62,31 +62,36 @@
         </nav>
     </header>
 
-    <!-- Banner Principal con Video -->
-    <section class="relative h-screen flex items-center justify-center overflow-hidden pt-16">
-        <!-- Video Background -->
-        <div class="absolute inset-0 w-full h-full">
-            <video autoplay muted loop class="w-full h-full object-cover">
-                <source src="https://assets.mixkit.co/videos/preview/mixkit-steaming-hot-coffee-483-large.mp4" type="video/mp4">
-                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1200&h=800&fit=crop" alt="Café artesanal" class="w-full h-full object-cover">
-            </video>
-            <!-- Overlay -->
-            <div class="absolute inset-0 bg-amber-900/60"></div>
-        </div>
+<!-- Banner Principal con Imagen -->
+<section class="relative h-screen flex items-center justify-center overflow-hidden pt-16">
+    <!-- Imagen Background -->
+    <div class="absolute inset-0 w-full h-full">
+        <img src="https://images.unsplash.com/photo-1561047029-3000c68339ca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+        alt="Barista preparando café" 
+        class="w-full h-full object-cover">
+        <!-- Overlay y efecto blur -->
+        <div class="absolute inset-0 bg-amber-900/40 backdrop-blur-sm"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-amber-900/60 to-amber-700/40"></div>
+    </div>
 
-        <!-- Contenido Hero -->
-        <div class="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                Descubre los <span class="text-amber-300">Sabores Auténticos</span> de Bucaramanga
-            </h1>
-            <p class="text-xl md:text-2xl mb-8 text-amber-100">
-                Café de altura, pan artesanal y tradición santandereana
-            </p>
-            <a href="#about" class="inline-block bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg">
-                Conoce Más
-            </a>
-        </div>
-    </section>
+    <!-- Contenido Hero -->
+    <div class="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+            Descubre los <span class="text-amber-300">Sabores Auténticos</span> de Bucaramanga
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 text-amber-100">
+            Café de altura, pan artesanal y tradición santandereana
+        </p>
+        <a href="#about" class="inline-block bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg">
+            Conoce Más
+        </a>
+    </div>
+
+    <!-- Elementos decorativos -->
+    <div class="absolute bottom-10 left-10 w-20 h-20 bg-amber-400/20 rounded-full blur-xl"></div>
+    <div class="absolute top-20 right-20 w-16 h-16 bg-amber-300/30 rounded-full blur-lg"></div>
+    <div class="absolute top-1/2 left-1/4 w-12 h-12 bg-amber-200/40 rounded-full blur-md"></div>
+</section>
 
     <!-- Sección Sobre Nosotros -->
     <section id="about" class="py-16 bg-white">
@@ -125,7 +130,7 @@
 
                 <div class="relative">
                     <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&h=400&fit=crop" alt="Café artesanal" 
-                         class="rounded-2xl shadow-2xl w-full h-96 object-cover retina-image">
+                        class="rounded-2xl shadow-2xl w-full h-96 object-cover retina-image">
                     <div class="absolute -bottom-6 -left-6 w-24 h-24 bg-amber-200 rounded-full opacity-50"></div>
                     <div class="absolute -top-6 -right-6 w-16 h-16 bg-amber-300 rounded-full opacity-30"></div>
                 </div>
