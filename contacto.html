@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Sabores de Bucaramanga</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="font-sans bg-amber-50 text-slate-800">
+    <!-- Header -->
+    <header class="fixed w-full z-50">
+        <nav class="bg-gradient-to-r from-amber-900 to-amber-700 shadow-lg transition-all duration-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <div class="flex items-center">
+                        <a href="index.html" class="flex items-center space-x-2 text-amber-100 hover:text-amber-300 transition-colors duration-300">
+                            <i class="fas fa-coffee text-xl"></i>
+                            <span class="font-bold text-xl">Sabores de Bucaramanga</span>
+                        </a>
+                    </div>
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="index.html" class="text-amber-100 hover:text-amber-300 font-medium transition-colors duration-300">Inicio</a>
+                        <a href="productos.html" class="text-amber-100 hover:text-amber-300 font-medium transition-colors duration-300">Productos</a>
+                        <a href="galeria.html" class="text-amber-100 hover:text-amber-300 font-medium transition-colors duration-300">Galería</a>
+                        <a href="contacto.html" class="text-amber-100 hover:text-amber-300 font-medium transition-colors duration-300 border-b-2 border-amber-400">Contacto</a>
+                    </div>
+                    <div class="md:hidden">
+                        <button id="mobile-menu-button" class="text-amber-100 hover:text-amber-300 transition-colors duration-300">
+                            <i class="fas fa-bars text-xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu" class="md:hidden hidden bg-amber-800 transition-all duration-300">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="index.html" class="block px-3 py-2 text-amber-100 hover:text-amber-300 font-medium transition-colors duration-300">Inicio</a>
+                    <a href="productos.html" class="block px-3 py-2 text-amber-100 hover:text-amber-300 font-medium transition-colors duration-300">Productos</a>
+                    <a href="galeria.html" class="block px-3 py-2 text-amber-100 hover:text-amber-300 font-medium transition-colors duration-300">Galería</a>
+                    <a href="contacto.html" class="block px-3 py-2 text-amber-100 hover:text-amber-300 font-medium bg-amber-900 rounded transition-colors duration-300">Contacto</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="pt-20 pb-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold text-amber-900 mb-4">Contáctanos</h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">¿Tienes preguntas? Estamos aquí para ayudarte</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Formulario de Contacto -->
+                <div class="bg-white rounded-2xl shadow-xl p-8">
+                    <h2 class="text-2xl font-bold text-amber-900 mb-6">Envíanos un Mensaje</h2>
+                    
+                    <form id="contact-form" class="space-y-6">
+                        <div class="form-group">
+                            <label for="nombre" class="block text-sm font-medium text-gray-700 mb-2">Nombre Completo *</label>
+                            <input type="text" id="nombre" name="nombre" required
+                                class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-amber-500 transition-colors duration-300">
+                            <div class="error-message" id="nombre-error"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Correo Electrónico *</label>
+                            <input type="email" id="email" name="email" required
+                                class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-amber-500 transition-colors duration-300">
+                            <div class="error-message" id="email-error"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefono" class="block text-sm font-medium text-gray-700 mb-2">Teléfono</label>
+                            <input type="tel" id="telefono" name="telefono"
+                                class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-amber-500 transition-colors duration-300">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="asunto" class="block text-sm font-medium text-gray-700 mb-2">Asunto *</label>
+                            <select id="asunto" name="asunto" required
+                                    class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-amber-500 transition-colors duration-300">
+                                <option value="">Selecciona un asunto</option>
+                                <option value="consulta">Consulta General</option>
+                                <option value="pedido">Pedido Especial</option>
+                                <option value="queja">Queja o Sugerencia</option>
+                                <option value="colaboracion">Colaboración</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                            <div class="error-message" id="asunto-error"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mensaje" class="block text-sm font-medium text-gray-700 mb-2">Mensaje *</label>
+                            <textarea id="mensaje" name="mensaje" rows="5" required
+                                    class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-amber-500 transition-colors duration-300 resize-none"></textarea>
+                            <div class="error-message" id="mensaje-error"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="flex items-center space-x-3">
+                                <input type="checkbox" id="newsletter" name="newsletter"
+                                    class="w-4 h-4 text-amber-600 border-gray-300 rounded focus:ring-amber-500">
+                                <span class="text-sm text-gray-700">Suscribirme al newsletter</span>
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="archivo" class="block text-sm font-medium text-gray-700 mb-2">Adjuntar Archivo (Opcional)</label>
+                            <input type="file" id="archivo" name="archivo"
+                                class="form-input w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-amber-500 transition-colors duration-300">
+                            <p class="text-xs text-gray-500 mt-1">Formatos permitidos: PDF, JPG, PNG (Máx. 5MB)</p>
+                        </div>
+
+                        <button type="submit" 
+                                class="w-full bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-bold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            Enviar Mensaje
+                        </button>
+                    </form>
+
+                    <div id="form-message" class="mt-4"></div>
+                </div>
+
+                <!-- Información de Contacto -->
+                <div class="space-y-8">
+                    <div class="bg-white rounded-2xl shadow-xl p-8">
+                        <h2 class="text-2xl font-bold text-amber-900 mb-6">Información de Contacto</h2>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-map-marker-alt text-amber-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-gray-800">Dirección</h3>
+                                    <p class="text-gray-600">Calle 45 # 25-35, Bucaramanga, Santander</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-phone text-amber-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-gray-800">Teléfono</h3>
+                                    <p class="text-gray-600">+57 (7) 634-5678</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-envelope text-amber-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-gray-800">Email</h3>
+                                    <p class="text-gray-600">info@saboresbucaramanga.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-clock text-amber-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-gray-800">Horario de Atención</h3>
+                                    <p class="text-gray-600">Lunes a Sábado: 7:00 AM - 9:00 PM</p>
+                                    <p class="text-gray-600">Domingos: 8:00 AM - 6:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mapa -->
+                    <div class="bg-white rounded-2xl shadow-xl p-8">
+                        <h2 class="text-2xl font-bold text-amber-900 mb-6">Ubicación</h2>
+                        <div id="map" class="rounded-lg h-64"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-amber-900 to-amber-800 text-amber-100 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h5 class="text-xl font-bold text-amber-300 mb-4">Sabores de Bucaramanga</h5>
+                    <p class="text-amber-200 leading-relaxed">Promoviendo la rica tradición cafetera y panadera de nuestra ciudad.</p>
+                </div>
+                <div>
+                    <h5 class="text-xl font-bold text-amber-300 mb-4">Enlaces Rápidos</h5>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-amber-200 hover:text-amber-300 transition-colors duration-300">Inicio</a></li>
+                        <li><a href="productos.html" class="text-amber-200 hover:text-amber-300 transition-colors duration-300">Productos</a></li>
+                        <li><a href="galeria.html" class="text-amber-200 hover:text-amber-300 transition-colors duration-300">Galería</a></li>
+                        <li><a href="contacto.html" class="text-amber-200 hover:text-amber-300 transition-colors duration-300">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-xl font-bold text-amber-300 mb-4">Síguenos</h5>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-amber-200 hover:text-amber-300 transition-colors duration-300 text-2xl"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-amber-200 hover:text-amber-300 transition-colors duration-300 text-2xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-amber-200 hover:text-amber-300 transition-colors duration-300 text-2xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-amber-200 hover:text-amber-300 transition-colors duration-300 text-2xl"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-amber-700 mt-8 pt-8 text-center">
+                <p class="text-amber-300">&copy; 2025 Sabores de Bucaramanga. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/contacto.js"></script>
+    <script src="js/maps-simple.js"></script>
+</body>
+</html>

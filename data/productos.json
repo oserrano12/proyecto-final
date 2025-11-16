@@ -1,0 +1,52 @@
+{
+    "productos": [
+    {
+    "id": 1,
+    "nombre": "Café Santandereano Premium",
+    "precio": 25000,
+    "categoria": "cafe",
+    "imagen": "https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=400&h=300&fit=crop",
+    "descripcion": "Café 100% arábico de las montañas de Santander"
+    },
+    {
+    "id": 2,
+    "nombre": "Pan de Yuca Artesanal", 
+    "precio": 8000,
+    "categoria": "panaderia",
+    "imagen": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&h=300&fit=crop",
+    "descripcion": "Pan de yuca recién horneado, suave y delicioso"
+    },
+    {
+    "id": 3,
+    "nombre": "Té de Hierbas Andinas",
+    "precio": 12000,
+    "categoria": "bebidas", 
+    "imagen": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400&h=300&fit=crop",
+    "descripcion": "Mezcla exclusiva de hierbas de la región andina"
+    },
+    {
+    "id": 4,
+    "nombre": "Almojábana Tradicional",
+    "precio": 6000,
+    "categoria": "panaderia",
+    "imagen": "https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=400&h=300&fit=crop",
+    "descripcion": "Almojábana esponjosa con queso campesino"
+    },
+    {
+    "id": 5, 
+    "nombre": "Cappuccino Especial",
+    "precio": 15000,
+    "categoria": "cafe",
+    "imagen": "https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=400&h=300&fit=crop",
+    "descripcion": "Cappuccino cremoso con granos seleccionados"
+    },
+    {
+    "id": 6,
+    "nombre": "Jugo de Mora Natural", 
+    "precio": 10000,
+    "categoria": "bebidas",
+    "imagen": "https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?w=400&h=300&fit=crop",
+    "descripcion": "Jugo natural de mora de la región"
+    }
+    ]   
+}

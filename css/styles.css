@@ -33,7 +33,7 @@ h1, h2, h3, h4, h5, h6 {
     animation: shake 0.5s ease-in-out;
 }
 
-/* Efectos personalizados para las cards */
+/* Efectos para las cards */
 .custom-feature-card {
     position: relative;
     transition: all 0.3s ease;
@@ -113,4 +113,42 @@ h1, h2, h3, h4, h5, h6 {
     .hero-subtitle {
         font-size: 1.2rem !important;
     }
+}
+
+/* Galería efectos */
+.gallery-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Formulario estilos */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-input {
+    transition: all 0.3s ease;
+}
+
+.form-input:focus {
+    border-color: #d97706;
+    box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.1);
+}
+
+.error-message {
+    color: #dc2626;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+.success-message {
+    background: #10b981;
+    color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
 }

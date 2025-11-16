@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Sabores de Bucaramanga</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="font-sans bg-amber-50 text-slate-800">
+    <!-- Header -->
+    <header class="fixed w-full z-50">
+        <nav class="bg-gradient-to-r from-amber-900 to-amber-700 shadow-lg transition-all duration-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <div class="flex items-center">
+                        <a href="index.html" class="flex items-center space-x-2 text-amber-100 hover:text-amber-300 transition-colors duration-300">
+                            <i class="fas fa-coffee text-xl"></i>
+                            <span class="font-bold text-xl">Sabores de Bucaramanga</span>
+                        </a>
+                    </div>
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="index.html" class="text-amber-100 hover:text-amber-300 font-medium transition-colors duration-300">Inicio</a>
+                        <a href="productos.html" class="text-amber-100 hover:text-amber-300 font-medium transition-colors duration-300 border-b-2 border-amber-400">Productos</a>
+                        <a href="galeria.html" class="text-amber-100 hover:text-amber-300 font-medium transition-colors duration-300">Galería</a>
+                        <a href="contacto.html" class="text-amber-100 hover:text-amber-300 font-medium transition-colors duration-300">Contacto</a>
+                    </div>
+                    <div class="md:hidden">
+                        <button id="mobile-menu-button" class="text-amber-100 hover:text-amber-300 transition-colors duration-300">
+                            <i class="fas fa-bars text-xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu" class="md:hidden hidden bg-amber-800 transition-all duration-300">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="index.html" class="block px-3 py-2 text-amber-100 hover:text-amber-300 font-medium transition-colors duration-300">Inicio</a>
+                    <a href="productos.html" class="block px-3 py-2 text-amber-100 hover:text-amber-300 font-medium bg-amber-900 rounded transition-colors duration-300">Productos</a>
+                    <a href="galeria.html" class="block px-3 py-2 text-amber-100 hover:text-amber-300 font-medium transition-colors duration-300">Galería</a>
+                    <a href="contacto.html" class="block px-3 py-2 text-amber-100 hover:text-amber-300 font-medium transition-colors duration-300">Contacto</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="pt-20 pb-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Header de Productos -->
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold text-amber-900 mb-4">Nuestros Productos</h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Descubre la variedad de cafés, panes y bebidas artesanales que ofrecemos</p>
+            </div>
+
+            <!-- Filtros -->
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+                <button class="filter-btn px-6 py-2 rounded-full bg-amber-500 text-white font-medium transition-all duration-300 hover:bg-amber-600 active" data-category="todos">
+                    Todos los Productos
+                </button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-amber-200 text-amber-800 font-medium transition-all duration-300 hover:bg-amber-300" data-category="cafe">
+                    <i class="fas fa-coffee mr-2"></i>Cafés
+                </button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-amber-200 text-amber-800 font-medium transition-all duration-300 hover:bg-amber-300" data-category="panaderia">
+                    <i class="fas fa-bread-slice mr-2"></i>Panadería
+                </button>
+                <button class="filter-btn px-6 py-2 rounded-full bg-amber-200 text-amber-800 font-medium transition-all duration-300 hover:bg-amber-300" data-category="bebidas">
+                    <i class="fas fa-glass-whiskey mr-2"></i>Bebidas
+                </button>
+            </div>
+
+            <!-- Grid de Productos -->
+            <div id="productos-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Los productos se cargan dinámicamente aquí -->
+            </div>
+
+            <!-- Mensaje sin productos -->
+            <div id="no-products" class="hidden text-center py-12">
+                <i class="fas fa-search text-6xl text-gray-400 mb-4"></i>
+                <h3 class="text-2xl font-bold text-gray-600 mb-2">No se encontraron productos</h3>
+                <p class="text-gray-500">Intenta con otra categoría</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-amber-900 to-amber-800 text-amber-100 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h5 class="text-xl font-bold text-amber-300 mb-4">Sabores de Bucaramanga</h5>
+                    <p class="text-amber-200 leading-relaxed">Promoviendo la rica tradición cafetera y panadera de nuestra ciudad.</p>
+                </div>
+                <div>
+                    <h5 class="text-xl font-bold text-amber-300 mb-4">Enlaces Rápidos</h5>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-amber-200 hover:text-amber-300 transition-colors duration-300">Inicio</a></li>
+                        <li><a href="productos.html" class="text-amber-200 hover:text-amber-300 transition-colors duration-300">Productos</a></li>
+                        <li><a href="galeria.html" class="text-amber-200 hover:text-amber-300 transition-colors duration-300">Galería</a></li>
+                        <li><a href="contacto.html" class="text-amber-200 hover:text-amber-300 transition-colors duration-300">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-xl font-bold text-amber-300 mb-4">Síguenos</h5>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-amber-200 hover:text-amber-300 transition-colors duration-300 text-2xl"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-amber-200 hover:text-amber-300 transition-colors duration-300 text-2xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-amber-200 hover:text-amber-300 transition-colors duration-300 text-2xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-amber-200 hover:text-amber-300 transition-colors duration-300 text-2xl"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-amber-700 mt-8 pt-8 text-center">
+                <p class="text-amber-300">&copy; 2025 Sabores de Bucaramanga. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/productos.js"></script>
+</body>
+</html>

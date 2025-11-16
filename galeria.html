@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería - Sabores de Bucaramanga</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="font-sans bg-amber-50 text-slate-800">
+    <!-- Header -->
+    <header class="fixed w-full z-50">
+        <nav class="bg-gradient-to-r from-amber-900 to-amber-700 shadow-lg transition-all duration-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <div class="flex items-center">
+                        <a href="index.html" class="flex items-center space-x-2 text-amber-100 hover:text-amber-300 transition-colors duration-300">
+                            <i class="fas fa-coffee text-xl"></i>
+                            <span class="font-bold text-xl">Sabores de Bucaramanga</span>
+                        </a>
+                    </div>
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="index.html" class="text-amber-100 hover:text-amber-300 font-medium transition-colors duration-300">Inicio</a>
+                        <a href="productos.html" class="text-amber-100 hover:text-amber-300 font-medium transition-colors duration-300">Productos</a>
+                        <a href="galeria.html" class="text-amber-100 hover:text-amber-300 font-medium transition-colors duration-300 border-b-2 border-amber-400">Galería</a>
+                        <a href="contacto.html" class="text-amber-100 hover:text-amber-300 font-medium transition-colors duration-300">Contacto</a>
+                    </div>
+                    <div class="md:hidden">
+                        <button id="mobile-menu-button" class="text-amber-100 hover:text-amber-300 transition-colors duration-300">
+                            <i class="fas fa-bars text-xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-menu" class="md:hidden hidden bg-amber-800 transition-all duration-300">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="index.html" class="block px-3 py-2 text-amber-100 hover:text-amber-300 font-medium transition-colors duration-300">Inicio</a>
+                    <a href="productos.html" class="block px-3 py-2 text-amber-100 hover:text-amber-300 font-medium transition-colors duration-300">Productos</a>
+                    <a href="galeria.html" class="block px-3 py-2 text-amber-100 hover:text-amber-300 font-medium bg-amber-900 rounded transition-colors duration-300">Galería</a>
+                    <a href="contacto.html" class="block px-3 py-2 text-amber-100 hover:text-amber-300 font-medium transition-colors duration-300">Contacto</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="pt-20 pb-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold text-amber-900 mb-4">Galería Multimedia</h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Descubre nuestra pasión a través de imágenes, videos y sonidos</p>
+            </div>
+
+            <!-- Filtros Galería -->
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+                <button class="gallery-filter px-6 py-2 rounded-full bg-amber-500 text-white font-medium transition-all duration-300 hover:bg-amber-600 active" data-filter="todos">
+                    <i class="fas fa-th-large mr-2"></i>Todos
+                </button>
+                <button class="gallery-filter px-6 py-2 rounded-full bg-amber-200 text-amber-800 font-medium transition-all duration-300 hover:bg-amber-300" data-filter="imagenes">
+                    <i class="fas fa-image mr-2"></i>Imágenes
+                </button>
+                <button class="gallery-filter px-6 py-2 rounded-full bg-amber-200 text-amber-800 font-medium transition-all duration-300 hover:bg-amber-300" data-filter="videos">
+                    <i class="fas fa-video mr-2"></i>Videos
+                </button>
+                <button class="gallery-filter px-6 py-2 rounded-full bg-amber-200 text-amber-800 font-medium transition-all duration-300 hover:bg-amber-300" data-filter="audio">
+                    <i class="fas fa-music mr-2"></i>Audio
+                </button>
+            </div>
+
+            <!-- Galería de Imágenes -->
+            <div id="galeria-imagenes" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                <!-- Imagen 1 -->
+                <div class="gallery-item imagen-item bg-white rounded-2xl shadow-lg overflow-hidden" data-type="imagenes">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=600&h=400&fit=crop" alt="Proceso del café" 
+                             class="w-full h-64 object-cover transition-transform duration-500 hover:scale-110 retina-image">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                            <button class="view-image opacity-0 hover:opacity-100 transform translate-y-4 hover:translate-y-0 transition-all duration-300 bg-white bg-opacity-90 text-amber-900 px-4 py-2 rounded-full font-medium">
+                                <i class="fas fa-expand mr-2"></i>Ver Imagen
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-amber-900 mb-2">Proceso del Café</h3>
+                        <p class="text-gray-600 text-sm">Desde la cosecha hasta tu taza</p>
+                    </div>
+                </div>
+
+                <!-- Imagen 2 -->
+                <div class="gallery-item imagen-item bg-white rounded-2xl shadow-lg overflow-hidden" data-type="imagenes">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&h=400&fit=crop" alt="Panadería tradicional" 
+                             class="w-full h-64 object-cover transition-transform duration-500 hover:scale-110 retina-image">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                            <button class="view-image opacity-0 hover:opacity-100 transform translate-y-4 hover:translate-y-0 transition-all duration-300 bg-white bg-opacity-90 text-amber-900 px-4 py-2 rounded-full font-medium">
+                                <i class="fas fa-expand mr-2"></i>Ver Imagen
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-amber-900 mb-2">Panadería Tradicional</h3>
+                        <p class="text-gray-600 text-sm">El arte de la panadería santandereana</p>
+                    </div>
+                </div>
+
+                <!-- Imagen 3 -->
+                <div class="gallery-item imagen-item bg-white rounded-2xl shadow-lg overflow-hidden" data-type="imagenes">
+                    <div class="relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&h=400&fit=crop" alt="Ambiente acogedor" 
+                             class="w-full h-64 object-cover transition-transform duration-500 hover:scale-110 retina-image">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center">
+                            <button class="view-image opacity-0 hover:opacity-100 transform translate-y-4 hover:translate-y-0 transition-all duration-300 bg-white bg-opacity-90 text-amber-900 px-4 py-2 rounded-full font-medium">
+                                <i class="fas fa-expand mr-2"></i>Ver Imagen
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-amber-900 mb-2">Ambiente Acogedor</h3>
+                        <p class="text-gray-600 text-sm">Nuestro espacio para disfrutar</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección de Videos -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold text-amber-900 mb-8 text-center">Videos de Nuestro Proceso</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Video 1 -->
+                    <div class="gallery-item video-item bg-white rounded-2xl shadow-lg overflow-hidden" data-type="videos">
+                        <div class="relative">
+                            <video controls class="w-full h-64 object-cover">
+                                <source src="https://assets.mixkit.co/videos/preview/mixkit-person-pouring-coffee-1711-large.mp4" type="video/mp4">
+                                Tu navegador no soporta el elemento video.
+                            </video>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-bold text-amber-900 mb-2 text-xl">Proceso del Café Artesanal</h3>
+                            <p class="text-gray-600 mb-4">Conoce cómo transformamos los granos de café en una experiencia única</p>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="fas fa-clock mr-2"></i>
+                                <span>Duración: 2:30 min</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video 2 -->
+                    <div class="gallery-item video-item bg-white rounded-2xl shadow-lg overflow-hidden" data-type="videos">
+                        <div class="relative">
+                            <video controls class="w-full h-64 object-cover">
+                                <source src="https://assets.mixkit.co/videos/preview/mixkit-baker-preparing-dough-for-bread-41359-large.mp4" type="video/mp4">
+                                Tu navegador no soporta el elemento video.
+                            </video>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-bold text-amber-900 mb-2 text-xl">Elaboración del Pan Tradicional</h3>
+                            <p class="text-gray-600 mb-4">El secreto detrás de nuestros panes artesanales</p>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="fas fa-clock mr-2"></i>
+                                <span>Duración: 3:15 min</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección de Audio -->
+            <div>
+                <h2 class="text-3xl font-bold text-amber-900 mb-8 text-center">Sonidos de Nuestro Espacio</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Audio 1 -->
+                    <div class="gallery-item audio-item bg-white rounded-2xl shadow-lg p-6" data-type="audio">
+                        <div class="flex items-center space-x-4 mb-4">
+                            <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-music text-amber-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-amber-900 text-lg">Ambiente Cafetero</h3>
+                                <p class="text-gray-600 text-sm">Sonidos relajantes de nuestra cafetería</p>
+                            </div>
+                        </div>
+                        <audio controls class="w-full">
+                            <source src="https://assets.mixkit.co/sfx/preview/mixkit-bubble-tea-restaurant-ambience-454.mp3" type="audio/mp3">
+                            Tu navegador no soporta el elemento audio.
+                        </audio>
+                    </div>
+
+                    <!-- Audio 2 -->
+                    <div class="gallery-item audio-item bg-white rounded-2xl shadow-lg p-6" data-type="audio">
+                        <div class="flex items-center space-x-4 mb-4">
+                            <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-coffee text-amber-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-amber-900 text-lg">Preparación de Café</h3>
+                                <p class="text-gray-600 text-sm">El sonido característico de nuestro café</p>
+                            </div>
+                        </div>
+                        <audio controls class="w-full">
+                            <source src="https://assets.mixkit.co/sfx/preview/mixkit-espresso-coffee-machine-working-439.mp3" type="audio/mp3">
+                            Tu navegador no soporta el elemento audio.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-amber-900 to-amber-800 text-amber-100 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h5 class="text-xl font-bold text-amber-300 mb-4">Sabores de Bucaramanga</h5>
+                    <p class="text-amber-200 leading-relaxed">Promoviendo la rica tradición cafetera y panadera de nuestra ciudad.</p>
+                </div>
+                <div>
+                    <h5 class="text-xl font-bold text-amber-300 mb-4">Enlaces Rápidos</h5>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-amber-200 hover:text-amber-300 transition-colors duration-300">Inicio</a></li>
+                        <li><a href="productos.html" class="text-amber-200 hover:text-amber-300 transition-colors duration-300">Productos</a></li>
+                        <li><a href="galeria.html" class="text-amber-200 hover:text-amber-300 transition-colors duration-300">Galería</a></li>
+                        <li><a href="contacto.html" class="text-amber-200 hover:text-amber-300 transition-colors duration-300">Contacto</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-xl font-bold text-amber-300 mb-4">Síguenos</h5>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-amber-200 hover:text-amber-300 transition-colors duration-300 text-2xl"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-amber-200 hover:text-amber-300 transition-colors duration-300 text-2xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-amber-200 hover:text-amber-300 transition-colors duration-300 text-2xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-amber-200 hover:text-amber-300 transition-colors duration-300 text-2xl"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-amber-700 mt-8 pt-8 text-center">
+                <p class="text-amber-300">&copy; 2025 Sabores de Bucaramanga. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-90 z-50 hidden items-center justify-center">
+        <div class="relative max-w-4xl max-h-full">
+            <button id="close-lightbox" class="absolute -top-12 right-0 text-white text-2xl hover:text-amber-300 transition-colors duration-300">
+                <i class="fas fa-times"></i>
+            </button>
+            <img id="lightbox-image" src="" alt="" class="max-w-full max-h-full rounded-lg">
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/galeria.js"></script>
+</body>
+</html>

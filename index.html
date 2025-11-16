@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portal interactivo de cafeterías y panaderías artesanales de Bucaramanga">
     <title>Sabores de Bucaramanga - Cafeterías y Panaderías Artesanales</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     
-    <!-- Tailwind CSS via CDN -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Fuentes de Google -->
+    <!-- Fuentes Google -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
@@ -62,13 +63,12 @@
     </header>
 
     <!-- Banner Principal con Video -->
-    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+    <section class="relative h-screen flex items-center justify-center overflow-hidden pt-16">
         <!-- Video Background -->
         <div class="absolute inset-0 w-full h-full">
             <video autoplay muted loop class="w-full h-full object-cover">
-                <source src="assets/videos/coffee-hero.mp4" type="video/mp4">
-                <!-- Imagen de respaldo -->
-                <img src="assets/images/hero-backup.jpg" alt="Café artesanal" class="w-full h-full object-cover">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-steaming-hot-coffee-483-large.mp4" type="video/mp4">
+                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1200&h=800&fit=crop" alt="Café artesanal" class="w-full h-full object-cover">
             </video>
             <!-- Overlay -->
             <div class="absolute inset-0 bg-amber-900/60"></div>
@@ -92,7 +92,6 @@
     <section id="about" class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <!-- Texto -->
                 <div>
                     <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-6 relative">
                         Nuestra Pasión por el Café y la Panadería
@@ -124,11 +123,9 @@
                     </div>
                 </div>
 
-                <!-- Imagen -->
                 <div class="relative">
-                    <img src="assets/images/about-coffee.jpg" alt="Café artesanal de Bucaramanga" 
+                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&h=400&fit=crop" alt="Café artesanal" 
                          class="rounded-2xl shadow-2xl w-full h-96 object-cover retina-image">
-                    <!-- Elementos decorativos -->
                     <div class="absolute -bottom-6 -left-6 w-24 h-24 bg-amber-200 rounded-full opacity-50"></div>
                     <div class="absolute -top-6 -right-6 w-16 h-16 bg-amber-300 rounded-full opacity-30"></div>
                 </div>
@@ -136,7 +133,7 @@
         </div>
     </section>
 
-    <!-- Sección del Clima (API Integration) -->
+    <!-- Sección Clima -->
     <section class="py-8 bg-gradient-to-br from-amber-100 to-amber-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="bg-white rounded-2xl shadow-xl p-8 max-w-2xl mx-auto text-center custom-weather-card">
@@ -155,15 +152,12 @@
     <footer class="bg-gradient-to-r from-amber-900 to-amber-800 text-amber-100 py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Información -->
                 <div>
                     <h5 class="text-xl font-bold text-amber-300 mb-4">Sabores de Bucaramanga</h5>
                     <p class="text-amber-200 leading-relaxed">
                         Promoviendo la rica tradición cafetera y panadera de nuestra ciudad.
                     </p>
                 </div>
-
-                <!-- Enlaces -->
                 <div>
                     <h5 class="text-xl font-bold text-amber-300 mb-4">Enlaces Rápidos</h5>
                     <ul class="space-y-2">
@@ -173,38 +167,36 @@
                         <li><a href="contacto.html" class="text-amber-200 hover:text-amber-300 transition-colors duration-300">Contacto</a></li>
                     </ul>
                 </div>
-
-                <!-- Redes Sociales -->
                 <div>
                     <h5 class="text-xl font-bold text-amber-300 mb-4">Síguenos</h5>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-amber-200 hover:text-amber-300 transition-colors duration-300 text-2xl">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" 
+                        class="text-amber-200 hover:text-amber-300 transition-colors duration-300 text-2xl">
                             <i class="fab fa-facebook"></i>
                         </a>
-                        <a href="#" class="text-amber-200 hover:text-amber-300 transition-colors duration-300 text-2xl">
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+                        class="text-amber-200 hover:text-amber-300 transition-colors duration-300 text-2xl">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="#" class="text-amber-200 hover:text-amber-300 transition-colors duration-300 text-2xl">
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"
+                        class="text-amber-200 hover:text-amber-300 transition-colors duration-300 text-2xl">
                             <i class="fab fa-twitter"></i>
                         </a>
-                        <a href="#" class="text-amber-200 hover:text-amber-300 transition-colors duration-300 text-2xl">
+                        <a href="https://web.whatsapp.com" target="_blank" rel="noopener noreferrer"
+                        class="text-amber-200 hover:text-amber-300 transition-colors duration-300 text-2xl">
                             <i class="fab fa-whatsapp"></i>
                         </a>
-                    </div>
                 </div>
             </div>
-
-            <!-- Línea divisoria -->
             <div class="border-t border-amber-700 mt-8 pt-8 text-center">
-                <p class="text-amber-300">
-                    &copy; 2025 Sabores de Bucaramanga. Todos los derechos reservados.
-                </p>
+                <p class="text-amber-300">&copy; 2025 Sabores de Bucaramanga. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/scripts/main.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/api-consumer.js"></script>
 </body>
 </html>
