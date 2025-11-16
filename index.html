@@ -3,19 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <meta name="description" content="Portal interactivo de cafeterías y panaderías artesanales de Bucaramanga">
+    <title>Sabores de Bucaramanga - Cafeterías y Panaderías Artesanales</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fuentes de Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <header>
+<body class="font-sans bg-amber-50 text-slate-800">
+    <!-- Header y Navegación -->
+    <header class="fixed w-full z-50">
+        <nav class="bg-gradient-to-r from-amber-900 to-amber-700 shadow-lg">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <!-- Logo -->
+                    <div class="flex items-center">
+                        <a href="index.html" class="flex items-center space-x-2 text-amber-100 hover:text-amber-300 transition-colors">
+                            <i class="fas fa-coffee text-xl"></i>
+                            <span class="font-bold text-xl">Sabores de Bucaramanga</span>
+                        </a>
+                    </div>
 
+                    <!-- Navegación Desktop -->
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="index.html" class="text-amber-100 hover:text-amber-300 font-medium transition-colors border-b-2 border-amber-400">Inicio</a>
+                        <a href="productos.html" class="text-amber-100 hover:text-amber-300 font-medium transition-colors">Productos</a>
+                        <a href="galeria.html" class="text-amber-100 hover:text-amber-300 font-medium transition-colors">Galería</a>
+                        <a href="contacto.html" class="text-amber-100 hover:text-amber-300 font-medium transition-colors">Contacto</a>
+                    </div>
+
+                    <!-- Botón Mobile -->
+                    <div class="md:hidden">
+                        <button id="mobile-menu-button" class="text-amber-100 hover:text-amber-300">
+                            <i class="fas fa-bars text-xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Menú Mobile -->
+            <div id="mobile-menu" class="md:hidden hidden bg-amber-800">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="index.html" class="block px-3 py-2 text-amber-100 hover:text-amber-300 font-medium bg-amber-900 rounded">Inicio</a>
+                    <a href="productos.html" class="block px-3 py-2 text-amber-100 hover:text-amber-300 font-medium">Productos</a>
+                    <a href="galeria.html" class="block px-3 py-2 text-amber-100 hover:text-amber-300 font-medium">Galería</a>
+                    <a href="contacto.html" class="block px-3 py-2 text-amber-100 hover:text-amber-300 font-medium">Contacto</a>
+                </div>
+            </div>
+        </nav>
     </header>
-    <main>
-        
-    </main>
-    <aside>
 
-    </aside>
+    <!-- Banner Principal con Video -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Video Background -->
+        <div class="absolute inset-0 w-full h-full">
+            <video autoplay muted loop class="w-full h-full object-cover">
+                <source src="assets/videos/coffee-hero.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento video.
+            </video>
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-amber-900/60"></div>
+        </div>
 
+        <!-- Contenido Hero -->
+        <div class="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                Descubre los <span class="text-amber-300">Sabores Auténticos</span> de Bucaramanga
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 text-amber-100">
+                Café de altura, pan artesanal y tradición santandereana
+            </p>
+            <a href="#about" class="inline-block bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg">
+                Conoce Más
+            </a>
+        </div>
+    </section>
+
+    <!-- Sección Sobre Nosotros -->
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Texto -->
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-6 relative">
+                        Nuestra Pasión por el Café y la Panadería
+                        <div class="w-20 h-1 bg-gradient-to-r from-amber-500 to-amber-700 mt-4"></div>
+                    </h2>
+                    <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+                        En el corazón de Bucaramanga, un grupo de cafeterías y panaderías artesanales 
+                        mantiene viva la tradición del buen café y el pan recién horneado. 
+                        Descubre la esencia de nuestra tierra a través de cada taza y cada bocado.
+                    </p>
+
+                    <!-- Features Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="text-center p-6 bg-amber-50 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-amber-100">
+                            <i class="fas fa-seedling text-3xl text-amber-600 mb-4"></i>
+                            <h4 class="font-bold text-amber-900 mb-2">Ingredientes Frescos</h4>
+                            <p class="text-gray-600 text-sm">Productos locales de la mejor calidad</p>
+                        </div>
+                        <div class="text-center p-6 bg-amber-50 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-amber-100">
+                            <i class="fas fa-heart text-3xl text-amber-600 mb-4"></i>
+                            <h4 class="font-bold text-amber-900 mb-2">Hecho con Amor</h4>
+                            <p class="text-gray-600 text-sm">Recetas tradicionales santandereanas</p>
+                        </div>
+                        <div class="text-center p-6 bg-amber-50 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-amber-100">
+                            <i class="fas fa-award text-3xl text-amber-600 mb-4"></i>
+                            <h4 class="font-bold text-amber-900 mb-2">Calidad Garantizada</h4>
+                            <p class="text-gray-600 text-sm">Los mejores granos de la región</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Imagen -->
+                <div class="relative">
+                    <img src="assets/images/about-coffee.jpg" alt="Café artesanal de Bucaramanga" 
+                         class="rounded-2xl shadow-2xl w-full h-96 object-cover">
+                    <!-- Elemento decorativo -->
+                    <div class="absolute -bottom-6 -left-6 w-24 h-24 bg-amber-200 rounded-full opacity-50"></div>
+                    <div class="absolute -top-6 -right-6 w-16 h-16 bg-amber-300 rounded-full opacity-30"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección del Clima (API Integration) -->
+    <section class="py-8 bg-gradient-to-br from-amber-100 to-amber-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-2xl shadow-xl p-8 max-w-2xl mx-auto text-center">
+                <h3 class="text-2xl font-bold text-amber-900 mb-4">
+                    <i class="fas fa-cloud-sun text-amber-600 mr-2"></i>
+                    Clima en Bucaramanga
+                </h3>
+                <div id="weather-data" class="text-lg text-gray-700">
+                    <p>Cargando información del clima...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-amber-900 to-amber-800 text-amber-100 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Información -->
+                <div>
+                    <h5 class="text-xl font-bold text-amber-300 mb-4">Sabores de Bucaramanga</h5>
+                    <p class="text-amber-200 leading-relaxed">
+                        Promoviendo la rica tradición cafetera y panadera de nuestra ciudad.
+                    </p>
+                </div>
+
+                <!-- Enlaces -->
+                <div>
+                    <h5 class="text-xl font-bold text-amber-300 mb-4">Enlaces Rápidos</h5>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-amber-200 hover:text-amber-300 transition-colors">Inicio</a></li>
+                        <li><a href="productos.html" class="text-amber-200 hover:text-amber-300 transition-colors">Productos</a></li>
+                        <li><a href="galeria.html" class="text-amber-200 hover:text-amber-300 transition-colors">Galería</a></li>
+                        <li><a href="contacto.html" class="text-amber-200 hover:text-amber-300 transition-colors">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <!-- Redes Sociales -->
+                <div>
+                    <h5 class="text-xl font-bold text-amber-300 mb-4">Síguenos</h5>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-amber-200 hover:text-amber-300 transition-colors text-2xl">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-amber-200 hover:text-amber-300 transition-colors text-2xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-amber-200 hover:text-amber-300 transition-colors text-2xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-amber-200 hover:text-amber-300 transition-colors text-2xl">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Línea divisoria -->
+            <div class="border-t border-amber-700 mt-8 pt-8 text-center">
+                <p class="text-amber-300">
+                    &copy; 2025 Sabores de Bucaramanga. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/api-consumer.js"></script>
 </body>
 </html>
