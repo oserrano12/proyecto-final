@@ -6,7 +6,7 @@
     <meta name="description" content="Portal interactivo de cafeterías y panaderías artesanales de Bucaramanga">
     <title>Sabores de Bucaramanga - Cafeterías y Panaderías Artesanales</title>
     
-    <!-- Tailwind CSS -->
+    <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
     <!-- Fuentes de Google -->
@@ -16,17 +16,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <!-- Estilos personalizados -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="font-sans bg-amber-50 text-slate-800">
     <!-- Header y Navegación -->
     <header class="fixed w-full z-50">
-        <nav class="bg-gradient-to-r from-amber-900 to-amber-700 shadow-lg">
+        <nav class="bg-gradient-to-r from-amber-900 to-amber-700 shadow-lg transition-all duration-300">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-between items-center h-16">
                     <!-- Logo -->
                     <div class="flex items-center">
-                        <a href="index.html" class="flex items-center space-x-2 text-amber-100 hover:text-amber-300 transition-colors">
+                        <a href="index.html" class="flex items-center space-x-2 text-amber-100 hover:text-amber-300 transition-colors duration-300">
                             <i class="fas fa-coffee text-xl"></i>
                             <span class="font-bold text-xl">Sabores de Bucaramanga</span>
                         </a>
@@ -34,15 +34,15 @@
 
                     <!-- Navegación Desktop -->
                     <div class="hidden md:flex items-center space-x-8">
-                        <a href="index.html" class="text-amber-100 hover:text-amber-300 font-medium transition-colors border-b-2 border-amber-400">Inicio</a>
-                        <a href="productos.html" class="text-amber-100 hover:text-amber-300 font-medium transition-colors">Productos</a>
-                        <a href="galeria.html" class="text-amber-100 hover:text-amber-300 font-medium transition-colors">Galería</a>
-                        <a href="contacto.html" class="text-amber-100 hover:text-amber-300 font-medium transition-colors">Contacto</a>
+                        <a href="index.html" class="text-amber-100 hover:text-amber-300 font-medium transition-colors duration-300 border-b-2 border-amber-400">Inicio</a>
+                        <a href="productos.html" class="text-amber-100 hover:text-amber-300 font-medium transition-colors duration-300">Productos</a>
+                        <a href="galeria.html" class="text-amber-100 hover:text-amber-300 font-medium transition-colors duration-300">Galería</a>
+                        <a href="contacto.html" class="text-amber-100 hover:text-amber-300 font-medium transition-colors duration-300">Contacto</a>
                     </div>
 
                     <!-- Botón Mobile -->
                     <div class="md:hidden">
-                        <button id="mobile-menu-button" class="text-amber-100 hover:text-amber-300">
+                        <button id="mobile-menu-button" class="text-amber-100 hover:text-amber-300 transition-colors duration-300">
                             <i class="fas fa-bars text-xl"></i>
                         </button>
                     </div>
@@ -50,12 +50,12 @@
             </div>
 
             <!-- Menú Mobile -->
-            <div id="mobile-menu" class="md:hidden hidden bg-amber-800">
+            <div id="mobile-menu" class="md:hidden hidden bg-amber-800 transition-all duration-300">
                 <div class="px-2 pt-2 pb-3 space-y-1">
-                    <a href="index.html" class="block px-3 py-2 text-amber-100 hover:text-amber-300 font-medium bg-amber-900 rounded">Inicio</a>
-                    <a href="productos.html" class="block px-3 py-2 text-amber-100 hover:text-amber-300 font-medium">Productos</a>
-                    <a href="galeria.html" class="block px-3 py-2 text-amber-100 hover:text-amber-300 font-medium">Galería</a>
-                    <a href="contacto.html" class="block px-3 py-2 text-amber-100 hover:text-amber-300 font-medium">Contacto</a>
+                    <a href="index.html" class="block px-3 py-2 text-amber-100 hover:text-amber-300 font-medium bg-amber-900 rounded transition-colors duration-300">Inicio</a>
+                    <a href="productos.html" class="block px-3 py-2 text-amber-100 hover:text-amber-300 font-medium transition-colors duration-300">Productos</a>
+                    <a href="galeria.html" class="block px-3 py-2 text-amber-100 hover:text-amber-300 font-medium transition-colors duration-300">Galería</a>
+                    <a href="contacto.html" class="block px-3 py-2 text-amber-100 hover:text-amber-300 font-medium transition-colors duration-300">Contacto</a>
                 </div>
             </div>
         </nav>
@@ -67,7 +67,8 @@
         <div class="absolute inset-0 w-full h-full">
             <video autoplay muted loop class="w-full h-full object-cover">
                 <source src="assets/videos/coffee-hero.mp4" type="video/mp4">
-                Tu navegador no soporta el elemento video.
+                <!-- Imagen de respaldo -->
+                <img src="assets/images/hero-backup.jpg" alt="Café artesanal" class="w-full h-full object-cover">
             </video>
             <!-- Overlay -->
             <div class="absolute inset-0 bg-amber-900/60"></div>
@@ -105,17 +106,17 @@
 
                     <!-- Features Grid -->
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div class="text-center p-6 bg-amber-50 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-amber-100">
+                        <div class="text-center p-6 bg-amber-50 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-amber-100 custom-feature-card">
                             <i class="fas fa-seedling text-3xl text-amber-600 mb-4"></i>
                             <h4 class="font-bold text-amber-900 mb-2">Ingredientes Frescos</h4>
                             <p class="text-gray-600 text-sm">Productos locales de la mejor calidad</p>
                         </div>
-                        <div class="text-center p-6 bg-amber-50 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-amber-100">
+                        <div class="text-center p-6 bg-amber-50 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-amber-100 custom-feature-card">
                             <i class="fas fa-heart text-3xl text-amber-600 mb-4"></i>
                             <h4 class="font-bold text-amber-900 mb-2">Hecho con Amor</h4>
                             <p class="text-gray-600 text-sm">Recetas tradicionales santandereanas</p>
                         </div>
-                        <div class="text-center p-6 bg-amber-50 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-amber-100">
+                        <div class="text-center p-6 bg-amber-50 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-amber-100 custom-feature-card">
                             <i class="fas fa-award text-3xl text-amber-600 mb-4"></i>
                             <h4 class="font-bold text-amber-900 mb-2">Calidad Garantizada</h4>
                             <p class="text-gray-600 text-sm">Los mejores granos de la región</p>
@@ -126,8 +127,8 @@
                 <!-- Imagen -->
                 <div class="relative">
                     <img src="assets/images/about-coffee.jpg" alt="Café artesanal de Bucaramanga" 
-                         class="rounded-2xl shadow-2xl w-full h-96 object-cover">
-                    <!-- Elemento decorativo -->
+                         class="rounded-2xl shadow-2xl w-full h-96 object-cover retina-image">
+                    <!-- Elementos decorativos -->
                     <div class="absolute -bottom-6 -left-6 w-24 h-24 bg-amber-200 rounded-full opacity-50"></div>
                     <div class="absolute -top-6 -right-6 w-16 h-16 bg-amber-300 rounded-full opacity-30"></div>
                 </div>
@@ -138,7 +139,7 @@
     <!-- Sección del Clima (API Integration) -->
     <section class="py-8 bg-gradient-to-br from-amber-100 to-amber-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-white rounded-2xl shadow-xl p-8 max-w-2xl mx-auto text-center">
+            <div class="bg-white rounded-2xl shadow-xl p-8 max-w-2xl mx-auto text-center custom-weather-card">
                 <h3 class="text-2xl font-bold text-amber-900 mb-4">
                     <i class="fas fa-cloud-sun text-amber-600 mr-2"></i>
                     Clima en Bucaramanga
@@ -166,10 +167,10 @@
                 <div>
                     <h5 class="text-xl font-bold text-amber-300 mb-4">Enlaces Rápidos</h5>
                     <ul class="space-y-2">
-                        <li><a href="index.html" class="text-amber-200 hover:text-amber-300 transition-colors">Inicio</a></li>
-                        <li><a href="productos.html" class="text-amber-200 hover:text-amber-300 transition-colors">Productos</a></li>
-                        <li><a href="galeria.html" class="text-amber-200 hover:text-amber-300 transition-colors">Galería</a></li>
-                        <li><a href="contacto.html" class="text-amber-200 hover:text-amber-300 transition-colors">Contacto</a></li>
+                        <li><a href="index.html" class="text-amber-200 hover:text-amber-300 transition-colors duration-300">Inicio</a></li>
+                        <li><a href="productos.html" class="text-amber-200 hover:text-amber-300 transition-colors duration-300">Productos</a></li>
+                        <li><a href="galeria.html" class="text-amber-200 hover:text-amber-300 transition-colors duration-300">Galería</a></li>
+                        <li><a href="contacto.html" class="text-amber-200 hover:text-amber-300 transition-colors duration-300">Contacto</a></li>
                     </ul>
                 </div>
 
@@ -177,16 +178,16 @@
                 <div>
                     <h5 class="text-xl font-bold text-amber-300 mb-4">Síguenos</h5>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-amber-200 hover:text-amber-300 transition-colors text-2xl">
+                        <a href="#" class="text-amber-200 hover:text-amber-300 transition-colors duration-300 text-2xl">
                             <i class="fab fa-facebook"></i>
                         </a>
-                        <a href="#" class="text-amber-200 hover:text-amber-300 transition-colors text-2xl">
+                        <a href="#" class="text-amber-200 hover:text-amber-300 transition-colors duration-300 text-2xl">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="#" class="text-amber-200 hover:text-amber-300 transition-colors text-2xl">
+                        <a href="#" class="text-amber-200 hover:text-amber-300 transition-colors duration-300 text-2xl">
                             <i class="fab fa-twitter"></i>
                         </a>
-                        <a href="#" class="text-amber-200 hover:text-amber-300 transition-colors text-2xl">
+                        <a href="#" class="text-amber-200 hover:text-amber-300 transition-colors duration-300 text-2xl">
                             <i class="fab fa-whatsapp"></i>
                         </a>
                     </div>
@@ -204,7 +205,6 @@
 
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/api-consumer.js"></script>
+    <script src="js/scripts/main.js"></script>
 </body>
 </html>
